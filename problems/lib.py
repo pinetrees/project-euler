@@ -9,6 +9,14 @@ def get_prime_factors_of(value):
             i += 1
     return factors
 
+def is_prime(value):
+    i = 2
+    while i < value:
+        if value % i == 0:
+            return False
+        i += 1
+    return True
+
 def get_lcm(a, b, *args):
     prime_factors = [get_prime_factors_of(a), get_prime_factors_of(b)]
     ds = []
