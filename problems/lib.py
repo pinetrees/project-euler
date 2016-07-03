@@ -10,12 +10,22 @@ def get_prime_factors_of(value):
     return factors
 
 def is_prime(value):
+    if value < 2:
+        return False
     i = 2
     while i < value:
         if value % i == 0:
             return False
         i += 1
     return True
+
+def get_primes_less_than(n):
+    primes = []
+    for i in range(n):
+        print i
+        if is_prime(i):
+            primes.append(i)
+    return primes
 
 def get_lcm(a, b, *args):
     prime_factors = [get_prime_factors_of(a), get_prime_factors_of(b)]
